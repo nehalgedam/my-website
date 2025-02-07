@@ -1,1 +1,1 @@
-alert("Welcome Saniya Kakde❤️✌️")
+alert("Hello friends welcome to my website ✌️")
