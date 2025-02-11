@@ -1,4 +1,3 @@
-alert("Hello friends welcome to my website✌️")
 // Smooth scrolling ka already built-in CSS feature use ho raha hai
 // Section fade-in animation jab scroll kare
 document.addEventListener("DOMContentLoaded", function () {
