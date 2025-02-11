@@ -1,19 +1,97 @@
-body{
-    background-color: black;
-    color:white
-}
 body {
-  background: linear-gradient(to right, #e0eafc, #cfdef3); 
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+    text-align: center;
+    scroll-behavior: smooth; /* Smooth scrolling */
 }
-.element {
-  animation: fadeIn 10s ease-in-out;
+/* Header */
+header {
+    background: #333;
+    color: white;
+    padding: 15px;
+    animation: slideDown 1s ease-in-out; /* Header animation */
 }
-
-@keyframes fadeIn {
-  from {
-    opacity: 15;
-  }
-  to {
-    opacity: 17;
-  }
+/* Navigation */
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+nav ul li a:hover {
+    color: #ffcc00;
+}
+/* Sections */
+section {
+    padding: 30px;
+    margin: 20px auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    width: 80%;
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 1s ease-in-out, transform 1s ease-in-out;
+}
+/* Jab section visible ho tab animate ho */
+section.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+/* Input fields */
+input, textarea {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+/* Button */
+button {
+    padding: 10px 20px;
+    background: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s, background 0.3s;
+}
+/* Button hover animation */
+button:hover {
+    background: #ffcc00;
+    color: black;
+    transform: scale(1.1);
+}
+/* Form submit animation */
+button:active {
+    transform: scale(0.9);
+}
+/* Footer */
+footer {
+    background: #222;
+    color: white;
+    padding: 10px;
+    width: 100%;
+    position: relative;
+}
+/* Keyframe Animations */
+@keyframes slideDown {
+    from {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
 }
