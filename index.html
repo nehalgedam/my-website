@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
     <header>
@@ -17,18 +20,44 @@
             </ul>
         </nav>
     </header>
+
     <section id="about" class="fade-in">
         <h2>About Me</h2>
-        <p>Hello! I'm a web developer learning to build awesome websites.</p>
+        <div class="about-content">
+            <p>
+                Hello! I am Nehal Pundlik Gedam.<br>
+                nehalgedam9293@gmail.com<br>
+                <a href="https://www.instagram.com/_nehal_gedam_2004_/" target="_blank">Instagram</a>
+            </p>
+            <p>
+                I am a web developer learning to build awesome websites.
+                I am interested in web design, game develoment and I am working on best website making.
+                You can contact me at the email address above.
+            </p>
+        </div>
     </section>
+
     <section id="projects" class="fade-in">
         <h2>My Projects</h2>
-        <ul>
-            <li>Project 1 - Website Design</li>
-            <li>Project 2 - JavaScript App</li>
-            <li>Project 3 - Backend API</li>
-        </ul>
+        <div class="project-grid">
+            <div class="project-card">
+                <h3>Project 1 - Website Design</h3>
+                <p>A responsive website design for a local business. Built with HTML, CSS, and JavaScript.</p>
+                <img src="placeholder.jpg" alt="Project 1 Screenshot">
+            </div>
+            <div class="project-card">
+                <h3>Project 2 - JavaScript App</h3>
+                <p>A dynamic web application using JavaScript for interactive user experience.</p>
+                <img src="placeholder.jpg" alt="Project 2 Screenshot">
+            </div>
+            <div class="project-card">
+                <h3>Project 3 - Backend API</h3>
+                <p>A RESTful API built with Node.js and Express to handle data for web applications.</p>
+                <img src="placeholder.jpg" alt="Project 3 Screenshot">
+            </div>
+        </div>
     </section>
+
     <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
         <form id="contact-form">
@@ -38,9 +67,11 @@
             <button type="submit">Send</button>
         </form>
     </section>
+
     <footer>
         <p>© 2025 My Portfolio. All Rights Reserved.</p>
     </footer>
+
     <script src="script.js"></script>
 </body>
 </html>
