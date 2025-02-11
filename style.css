@@ -1,37 +1,42 @@
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #f4f4f4;
-    text-align: center;
-    scroll-behavior: smooth; /* Smooth scrolling */
+    color: #333;
+    scroll-behavior: smooth;
 }
-/* Header */
+
 header {
     background: #333;
     color: white;
     padding: 15px;
-    animation: slideDown 1s ease-in-out; /* Header animation */
+    text-align: center;
+    animation: slideDown 1s ease-in-out;
 }
-/* Navigation */
+
 nav ul {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
+
 nav ul li {
     display: inline;
     margin: 0 15px;
 }
+
 nav ul li a {
     color: white;
     text-decoration: none;
     font-size: 18px;
     transition: color 0.3s;
 }
+
 nav ul li a:hover {
     color: #ffcc00;
 }
-/* Sections */
+
 section {
     padding: 30px;
     margin: 20px auto;
@@ -43,12 +48,55 @@ section {
     transform: translateY(30px);
     transition: opacity 1s ease-in-out, transform 1s ease-in-out;
 }
-/* Jab section visible ho tab animate ho */
+
 section.show {
     opacity: 1;
     transform: translateY(0);
 }
-/* Input fields */
+
+#about {
+    background-color: #f0f0f0;
+    color: #333;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.about-content p {
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.about-content a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.about-content a:hover {
+    text-decoration: underline;
+}
+
+.project-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+.project-card {
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.project-card img {
+    max-width: 100%;
+    height: auto;
+}
+
 input, textarea {
     width: 80%;
     padding: 10px;
@@ -56,7 +104,7 @@ input, textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-/* Button */
+
 button {
     padding: 10px 20px;
     background: #333;
@@ -66,25 +114,26 @@ button {
     font-size: 16px;
     transition: transform 0.3s, background 0.3s;
 }
-/* Button hover animation */
+
 button:hover {
     background: #ffcc00;
     color: black;
     transform: scale(1.1);
 }
-/* Form submit animation */
+
 button:active {
     transform: scale(0.9);
 }
-/* Footer */
+
 footer {
     background: #222;
     color: white;
     padding: 10px;
     width: 100%;
     position: relative;
+    text-align: center;
 }
-/* Keyframe Animations */
+
 @keyframes slideDown {
     from {
         transform: translateY(-50px);
@@ -93,5 +142,16 @@ footer {
     to {
         transform: translateY(0);
         opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    section {
+        width: 90%;
+    }
+
+    .project-grid {
+        grid-template-columns: 1fr;
     }
 }
