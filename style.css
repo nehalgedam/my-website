@@ -84,6 +84,7 @@ section.show {
     border-radius: 50%;
     margin-bottom: 15px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    object-fit: cover; /* Ensure the image fits within the circle */
 }
 
 /* Skills */
@@ -170,6 +171,11 @@ button:active {
     transform: scale(0.9);
 }
 
+button.sending {
+    background: #ccc;
+    cursor: not-allowed;
+}
+
 /* Footer */
 footer {
     background: #222;
@@ -223,5 +229,10 @@ footer {
 
     .project-grid {
         grid-template-columns: 1fr;
+    }
+
+    .profile-pic {
+        width: 100px;
+        height: 100px;
     }
 }
