@@ -3,13 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Nehal Gedam | Portfolio</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="css/all.css"> <!-- Corrected FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Welcome to My Portfolio</h1>
         <nav>
@@ -17,47 +19,59 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
+                <li><button id="dark-mode-toggle">🌙</button></li>
             </ul>
         </nav>
     </header>
 
+    <!-- About Me Section -->
     <section id="about" class="fade-in">
         <h2>About Me</h2>
         <div class="about-content">
-            <p>
-                Hello! I am Nehal Pundlik Gedam.<br>
-                nehalgedam9293@gmail.com<br>
-                <a href="https://www.instagram.com/_nehal_gedam_2004_/" target="_blank">Instagram</a>
+            <img src="Photo1.png" alt="Nehal Gedam" class="profile-pic"> 
+            <p>Hello! I am <strong>Nehal Pundlik Gedam</strong>, a passionate Web Developer.</p>
+            <p>Email: <a href="mailto:nehalgedam9293@gmail.com">nehalgedam9293@gmail.com</a></p>
+            <p>Follow me on: 
+                <a href="https://www.instagram.com/_nehal_gedam_2004_/" target="_blank">
+                    <i class="fab fa-instagram"></i> Instagram
+                </a>
             </p>
-            <p>
-                I am a web developer learning to build awesome websites.
-                I am interested in web design, game develoment and I am working on best website making.
-                You can contact me at the email address above.
-            </p>
+            <h3>Skills</h3>
+            <div class="skills">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>C</span>
+                <span>C++</span>
+                <span>Java</span>
+                <span>Python</span>
+            </div>
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="fade-in">
         <h2>My Projects</h2>
         <div class="project-grid">
             <div class="project-card">
-                <h3>Project 1 - Website Design</h3>
-                <p>A responsive website design for a local business. Built with HTML, CSS, and JavaScript.</p>
-                <img src="placeholder.jpg" alt="Project 1 Screenshot">
+                <h3>Portfolio Website</h3>
+                <p>A personal portfolio website built using HTML, CSS, and JavaScript.</p>
+                <a href="https://nehalgedam.github.io/my-website/" target="_blank">View Project</a>
             </div>
             <div class="project-card">
-                <h3>Project 2 - JavaScript App</h3>
-                <p>A dynamic web application using JavaScript for interactive user experience.</p>
-                <img src="placeholder.jpg" alt="Project 2 Screenshot">
+                <h3>JavaScript App</h3>
+                <p>Interactive web application built using JavaScript.</p>
+                <a href="#" target="_blank">View Project</a>
             </div>
             <div class="project-card">
-                <h3>Project 3 - Backend API</h3>
-                <p>A RESTful API built with Node.js and Express to handle data for web applications.</p>
-                <img src="placeholder.jpg" alt="Project 3 Screenshot">
+                <h3>Backend API</h3>
+                <p>A RESTful API built using Node.js and Express.</p>
+                <a href="#" target="_blank">View Project</a>
             </div>
         </div>
     </section>
 
+    <!-- Contact Me Section -->
     <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
         <form id="contact-form">
@@ -68,10 +82,31 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
-        <p>© 2025 My Portfolio. All Rights Reserved.</p>
+        <p>© 2025 Nehal Gedam | All Rights Reserved.</p>
     </footer>
 
-    <script src="script.js"></script>
+    <!-- Firebase CDN -->
+    <script type="module">
+        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
+        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
+
+        const firebaseConfig = {
+            apiKey: "AIzaSyCoxvjq55Al_e_8Y8riFtJWVHl138cGXLg",
+            authDomain: "my-website-8e6f0.firebaseapp.com",
+            projectId: "my-website-8e6f0",
+            storageBucket: "my-website-8e6f0.appspot.com",
+            messagingSenderId: "805197097621",
+            appId: "1:805197097621:web:a2f74589362b99269c899c"
+        };
+
+        const app = initializeApp(firebaseConfig);
+        const db = getFirestore(app);
+
+        window.firebaseApp = app;
+        window.firebaseDb = db;
+    </script>
+    <script type="module" src="script.js"></script>
 </body>
 </html>
