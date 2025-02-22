@@ -49,6 +49,17 @@ document.addEventListener("DOMContentLoaded", function () {
         localStorage.setItem("dark-mode", state ? "enabled" : "disabled");
     }
 
+    // Dark mode button click event
+    darkModeToggle.addEventListener("click", function () {
+        isDarkMode = !isDarkMode;
+        applyDarkMode(isDarkMode);
+    });
+
+    // Apply dark mode if previously enabled
+    if (isDarkMode) {
+        applyDarkMode(true);
+    }
+
     // Function to handle form submission
     function handleFormSubmission(event) {
         event.preventDefault();
@@ -61,6 +72,7 @@ document.addEventListener("DOMContentLoaded", function () {
         if (name && email && message) {
             button.innerHTML = "Sending...";
             button.disabled = true;
+            button.classList.add("sending");
 
             if (!db) {
                 alert("Database not initialized. Please try again later.");
@@ -105,22 +117,12 @@ document.addEventListener("DOMContentLoaded", function () {
         button.style.backgroundColor = "#333";
         button.style.transform = "scale(1)";
         button.disabled = false;
+        button.classList.remove("sending");
     }
 
     // Run animation on page load
     revealSections();
     window.addEventListener("scroll", revealSections);
-
-    // Dark mode button click event
-    darkModeToggle.addEventListener("click", function () {
-        isDarkMode = !isDarkMode;
-        applyDarkMode(isDarkMode);
-    });
-
-    // Apply dark mode if previously enabled
-    if (isDarkMode) {
-        applyDarkMode(true);
-    }
 
     // Contact Form Submission with Firebase
     document.getElementById("contact-form").addEventListener("submit", handleFormSubmission);
