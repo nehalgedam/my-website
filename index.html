@@ -3,18 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Nehal Gedam's Portfolio - Web Developer">
-    <meta name="keywords" content="Nehal Gedam, Portfolio, Web Developer, Projects">
-    <meta name="author" content="Nehal Gedam">
     <title>Nehal Gedam | Portfolio</title>
+    <meta name="description" content="Nehal Gedam - A passionate web developer with expertise in HTML, CSS, JavaScript, C, C++, Java, and Python.">
+    
+    <!-- Open Graph (OG) Tags -->
+    <meta property="og:title" content="Nehal Gedam | Web Developer">
+    <meta property="og:description" content="Welcome to my portfolio. Explore my projects and skills!">
+    <meta property="og:image" content="https://nehalgedam.github.io/my-website/Photo1.png">
+    <meta property="og:url" content="https://nehalgedam.github.io/my-website/">
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Nehal Gedam",
+      "jobTitle": "Web Developer",
+      "url": "https://nehalgedam.github.io/my-website/",
+      "sameAs": [
+        "https://www.instagram.com/_nehal_gedam_2004_/"
+      ]
+    }
+    </script>
+
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/all.css"> <!-- Corrected FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Added favicon link -->
 </head>
 <body>
+    <!-- Header Section -->
     <header>
         <h1>Welcome to My Portfolio</h1>
         <nav>
@@ -22,15 +42,16 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="dark-mode-toggle">🌙</button></li>
+                <li><button id="dark-mode-toggle">🌙</button></li> <!-- Added dark mode toggle button -->
             </ul>
         </nav>
     </header>
 
+    <!-- About Me Section -->
     <section id="about" class="fade-in">
-        <h2>About Me</h2>
+        <h1>About Me</h1>
         <div class="about-content">
-            <img src="Photo1.png" alt="Nehal Gedam" class="profile-pic"> 
+            <img src="Photo1.png" alt="Nehal Gedam" class="profile-pic" loading="lazy"> 
             <p>Hello! I am <strong>Nehal Pundlik Gedam</strong>, a passionate Web Developer.</p>
             <p>Email: <a href="mailto:nehalgedam9293@gmail.com">nehalgedam9293@gmail.com</a></p>
             <p>Follow me on: 
@@ -51,13 +72,14 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
     <section id="projects" class="fade-in">
         <h2>My Projects</h2>
         <div class="project-grid">
             <div class="project-card">
                 <h3>Portfolio Website</h3>
                 <p>A personal portfolio website built using HTML, CSS, and JavaScript.</p>
-                <a href="https://nehalgedam.github.io/my-website/" target="_blank">View Project</a>
+                <a href="https://nehalgedam.github.io/my-website/portfolio" target="_blank">View Project</a>
             </div>
             <div class="project-card">
                 <h3>JavaScript App</h3>
@@ -72,6 +94,7 @@
         </div>
     </section>
 
+    <!-- Contact Me Section -->
     <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
         <form id="contact-form">
@@ -82,25 +105,30 @@
         </form>
     </section>
 
+    <!-- Footer -->
     <footer>
         <p>© 2025 Nehal Gedam | All Rights Reserved.</p>
     </footer>
 
+    <!-- Firebase CDN -->
     <script type="module">
         import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
         import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
 
         const firebaseConfig = {
-            apiKey: "YOUR_FIREBASE_API_KEY",
-            authDomain: "your-project.firebaseapp.com",
-            projectId: "your-project",
-            storageBucket: "your-project.appspot.com",
-            messagingSenderId: "your-sender-id",
-            appId: "your-app-id"
+            apiKey: "YOUR_API_KEY_HERE",
+            authDomain: "my-website-8e6f0.firebaseapp.com",
+            projectId: "my-website-8e6f0",
+            storageBucket: "my-website-8e6f0.appspot.com",
+            messagingSenderId: "805197097621",
+            appId: "1:805197097621:web:a2f74589362b99269c899c"
         };
 
         const app = initializeApp(firebaseConfig);
         const db = getFirestore(app);
+
+        window.firebaseApp = app;
+        window.firebaseDb = db;
     </script>
     <script type="module" src="script.js"></script>
 </body>
