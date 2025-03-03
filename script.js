@@ -7,7 +7,7 @@ const firebaseConfig = {
     apiKey: "AIzaSyCoxvjq55Al_e_8Y8riFtJWVHl138cGXLg",
     authDomain: "my-website-8e6f0.firebaseapp.com",
     projectId: "my-website-8e6f0",
-    storageBucket: "my-website-8e6f0",
+    storageBucket: "my-website-8e6f0.appspot.com",
     messagingSenderId: "805197097621",
     appId: "1:805197097621:web:a2f74589362b99269c899c"
 };
@@ -27,12 +27,13 @@ try {
     console.error("Firebase initialization error:", error);
 }
 
+// Wait for the DOM to be fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     let sections = document.querySelectorAll("section");
     let darkModeToggle = document.getElementById("dark-mode-toggle");
     let isDarkMode = localStorage.getItem("dark-mode") === "enabled";
 
-    // Function to Reveal Sections on Scroll
+    // Function to reveal sections on scroll
     function revealSections() {
         sections.forEach((section) => {
             let sectionTop = section.getBoundingClientRect().top;
@@ -43,19 +44,19 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    // Function to handle dark mode state
+    // Function to apply dark mode
     function applyDarkMode(state) {
         document.body.classList.toggle("dark-mode", state);
         localStorage.setItem("dark-mode", state ? "enabled" : "disabled");
     }
 
-    // Dark mode button click event
+    // Dark mode button event
     darkModeToggle.addEventListener("click", function () {
         isDarkMode = !isDarkMode;
         applyDarkMode(isDarkMode);
     });
 
-    // Apply dark mode if previously enabled
+    // Apply dark mode if it was previously enabled
     if (isDarkMode) {
         applyDarkMode(true);
     }
@@ -80,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 return;
             }
 
-            // Store data in Firestore
+            // Store form data in Firestore
             addDoc(collection(db, "messages"), {
                 name: name,
                 email: email,
