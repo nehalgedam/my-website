@@ -4,15 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Nehal Gedam | Portfolio</title>
+    <meta name="description" content="Nehal Gedam - A passionate Web Developer skilled in C, C++, Java, Python, and JavaScript. Check out my projects and connect with me.">
+    <meta name="keywords" content="Nehal Gedam, Web Developer, Portfolio, C, C++, Java, Python, HTML, JavaScript">
+    <meta name="author" content="Nehal Gedam">
+    <meta property="og:title" content="Nehal Gedam | Portfolio">
+    <meta property="og:description" content="A passionate Web Developer skilled in C, C++, Java, Python, and JavaScript. Check out my projects and connect with me.">
+    <meta property="og:image" content="https://nehalgedam.github.io/my-website/Photo1.png">
+    <meta property="og:url" content="https://nehalgedam.github.io/my-website/">
+    <meta name="twitter:card" content="summary_large_image">
+    
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="css/all.css"> <!-- Corrected FontAwesome -->
+    <link rel="stylesheet" href="css/all.css"> 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="icon" href="favicon.ico" type="image/x-icon"> <!-- Added favicon link -->
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
 </head>
 <body>
-    <!-- Header Section -->
     <header>
         <h1>Welcome to My Portfolio</h1>
         <nav>
@@ -20,20 +28,19 @@
                 <li><a href="#about">About</a></li>
                 <li><a href="#projects">Projects</a></li>
                 <li><a href="#contact">Contact</a></li>
-                <li><button id="dark-mode-toggle">🌙</button></li> <!-- Added dark mode toggle button -->
+                <li><button id="dark-mode-toggle" aria-label="Toggle Dark Mode">🌙</button></li>
             </ul>
         </nav>
     </header>
 
-    <!-- About Me Section -->
     <section id="about" class="fade-in">
         <h2>About Me</h2>
         <div class="about-content">
-            <img src="Photo1.png" alt="Nehal Gedam" class="profile-pic"> 
+            <img src="Photo1.png" alt="Nehal Gedam - Web Developer" class="profile-pic"> 
             <p>Hello! I am <strong>Nehal Pundlik Gedam</strong>, a passionate Web Developer.</p>
             <p>Email: <a href="mailto:nehalgedam9293@gmail.com">nehalgedam9293@gmail.com</a></p>
             <p>Follow me on: 
-                <a href="https://www.instagram.com/_nehal_gedam_2004_/" target="_blank">
+                <a href="https://www.instagram.com/_nehal_gedam_2004_/" target="_blank" rel="noopener">
                     <i class="fab fa-instagram"></i> Instagram
                 </a>
             </p>
@@ -50,29 +57,17 @@
         </div>
     </section>
 
-    <!-- Projects Section -->
     <section id="projects" class="fade-in">
         <h2>My Projects</h2>
         <div class="project-grid">
             <div class="project-card">
                 <h3>Portfolio Website</h3>
                 <p>A personal portfolio website built using HTML, CSS, and JavaScript.</p>
-                <a href="https://nehalgedam.github.io/my-website/" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>JavaScript App</h3>
-                <p>Interactive web application built using JavaScript.</p>
-                <a href="#" target="_blank">View Project</a>
-            </div>
-            <div class="project-card">
-                <h3>Backend API</h3>
-                <p>A RESTful API built using Node.js and Express.</p>
-                <a href="#" target="_blank">View Project</a>
+                <a href="https://nehalgedam.github.io/my-website/" target="_blank" rel="noopener">View Project</a>
             </div>
         </div>
     </section>
 
-    <!-- Contact Me Section -->
     <section id="contact" class="fade-in">
         <h2>Contact Me</h2>
         <form id="contact-form">
@@ -83,31 +78,10 @@
         </form>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>© 2025 Nehal Gedam | All Rights Reserved.</p>
     </footer>
 
-    <!-- Firebase CDN -->
-    <script type="module">
-        import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-app.js';
-        import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.8.0/firebase-firestore.js';
-
-        const firebaseConfig = {
-            apiKey: "AIzaSyCoxvjq55Al_e_8Y8riFtJWVHl138cGXLg",
-            authDomain: "my-website-8e6f0.firebaseapp.com",
-            projectId: "my-website-8e6f0",
-            storageBucket: "my-website-8e6f0.appspot.com",
-            messagingSenderId: "805197097621",
-            appId: "1:805197097621:web:a2f74589362b99269c899c"
-        };
-
-        const app = initializeApp(firebaseConfig);
-        const db = getFirestore(app);
-
-        window.firebaseApp = app;
-        window.firebaseDb = db;
-    </script>
     <script type="module" src="script.js"></script>
 </body>
 </html>
